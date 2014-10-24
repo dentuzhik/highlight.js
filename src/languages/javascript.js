@@ -75,6 +75,26 @@ function(hljs) {
       },
       {
         begin: '\\.' + hljs.IDENT_RE, relevance: 0 // hack: prevents detection of keywords after dots
+      },
+      // Template strings
+      {
+        className: 'string',
+        begin: '`', end: '`',
+        contains: [
+          // Substitutions
+          {
+            className: 'title',
+            begin: /\$\{/,
+            end: /\}/,
+            contains: [
+              hljs.APOS_STRING_MODE,
+              hljs.QUOTE_STRING_MODE,
+              hljs.JS_BINARY_NUMBER_MODE,
+              hljs.OCTAL_NUMBER_MODE,
+              hljs.C_NUMBER_MODE,
+            ]
+          }
+        ]
       }
     ]
   };
