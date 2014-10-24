@@ -647,6 +647,8 @@ https://highlightjs.org/
   hljs.NUMBER_RE = '\\b\\d+(\\.\\d+)?';
   hljs.C_NUMBER_RE = '(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)'; // 0x..., 0..., decimal, float
   hljs.BINARY_NUMBER_RE = '\\b(0b[01]+)'; // 0b...
+  hljs.JS_BINARY_NUMBER_RE = '\\b(0[bB][01]+)'; // 0b, 0B...
+  hljs.OCTAL_NUMBER_RE = '\\b(0[oO][0-7]+)'; // 0o, 0O...
   hljs.RE_STARTERS_RE = '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~';
 
   // Common modes
@@ -697,6 +699,15 @@ https://highlightjs.org/
     className: 'number',
     begin: hljs.BINARY_NUMBER_RE,
     relevance: 0
+  };
+  hljs.JS_BINARY_NUMBER_MODE = {
+    className: 'number',
+    begin: hljs.JS_BINARY_NUMBER_RE,
+    relevance: 0
+  };
+  hljs.OCTAL_NUMBER_MODE = {
+    className: 'number',
+    begin: hljs.OCTAL_NUMBER_RE,
   };
   hljs.CSS_NUMBER_MODE = {
     className: 'number',

@@ -35,6 +35,8 @@ function(hljs) {
       hljs.QUOTE_STRING_MODE,
       hljs.C_LINE_COMMENT_MODE,
       hljs.C_BLOCK_COMMENT_MODE,
+      hljs.JS_BINARY_NUMBER_MODE,
+      hljs.OCTAL_NUMBER_MODE,
       hljs.C_NUMBER_MODE,
       { // "value" container
         begin: '(' + hljs.RE_STARTERS_RE + '|\\b(case|return|throw)\\b)\\s*',
