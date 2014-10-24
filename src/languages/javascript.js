@@ -17,7 +17,7 @@ function(hljs) {
         'eval isFinite isNaN parseFloat parseInt decodeURI decodeURIComponent ' +
         'encodeURI encodeURIComponent escape unescape Object Function Boolean Error ' +
         'EvalError InternalError RangeError ReferenceError StopIteration SyntaxError ' +
-        'TypeError URIError Number Math Date String RegExp Array Float32Array ' +
+        'TypeError URIError Number Math Date String RegExp Array Promise Float32Array ' +
         'Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array ' +
         'Uint8Array Uint8ClampedArray ArrayBuffer DataView JSON Intl arguments require ' +
         'module console window document'
